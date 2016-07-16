@@ -46,6 +46,10 @@ import {
   MarkerClusterer,
 } from "../pages/addons";
 
+import {
+  MarkerClustererOverlayViewBug,
+} from '../pages/bugs';
+
 export default (
   <Route path="/" component={Application}>
     <IndexRoute component={GettingStarted} />
@@ -72,6 +76,9 @@ export default (
     </Route>
     <Route path="addons">
       <Route path="marker-clusterer" component={MarkerClusterer} />
+    </Route>
+    <Route path="bugs">
+      <Route path="marker-clusterer-overlay-view-bug" component={MarkerClustererOverlayViewBug} />
     </Route>
     <Route path="geojson" component={GeojsonToComponents} />
     <Redirect path="*" to="/" />
